@@ -6,9 +6,12 @@ from todos.permissions import IsOwnerOrReadOnly
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
 
-class TodoList(generics.ListCreateAPIView):
+class TodoViewSet(viewsets.ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -17,20 +20,7 @@ class TodoList(generics.ListCreateAPIView):
         serializer.save(owner=self.request.user)
 
 
-class TodoDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = [
-        permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
-
-    queryset = Todo.objects.all()
-    serializer_class = TodoSerializer
-
-
-class UserList(generics.ListAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-
-class UserDetail(generics.RetrieveAPIView):
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
