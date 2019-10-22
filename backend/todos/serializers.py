@@ -12,8 +12,8 @@ class TodoSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    todos = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Todo.objects.all())
+    todos = serializers.HyperlinkedRelatedField(
+        many=True, view_name='todo-detail', read_only=True)
 
     class Meta:
         model = User
