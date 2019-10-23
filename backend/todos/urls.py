@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from todos import views
 
 router = DefaultRouter()
-router.register(r'snippets', views.TodoViewSet)
+router.register(r'todos', views.TodoViewSet)
 router.register(r'users', views.UserViewSet)
 
 
