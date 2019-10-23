@@ -37,9 +37,6 @@ You can see a link in terminal. Open the link in a browser. You can see some URL
 ## Contributors
 * **Rakib Hasan** - *Initial work* - [codewithrakib](https://github.com/codewithrakib)
 
-
-Please make sure to update tests as appropriate.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
