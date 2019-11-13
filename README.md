@@ -35,7 +35,7 @@ You can see a link in terminal. Open the link in a browser. You can see some URL
 
 
 ## Contributors
-* **Md Rakibul Hasan** - *Initial work* - [rhasancodes](https://github.com/rhasancodes)
+* **Md Rakibul Hasan** - *Initial work* - [codermrhasan](https://github.com/codermrhasan)
 
 ## License
 
